@@ -1,0 +1,18 @@
+.shoppinglayout{
+}
+
+.header{
+  height: 100px;
+  background-color: blue;
+}
+.header-text{
+  line-height: 98px;
+  font-size: 40px;
+}
+.informative{
+  list-style: none;
+}
+.header-logo{
+  height: 40px;
+  width: 40px;
+}

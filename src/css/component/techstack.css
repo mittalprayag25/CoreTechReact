@@ -1,0 +1,36 @@
+  .input_techStack{
+    height: 52px;
+    width: 800px;
+    font-size: 2em;
+    color: orange;
+    font-weight: 500;
+    padding: .3em;
+    float: left;
+    background-image: url('./../../img/learn-icon.png');
+    background-size: cover;
+
+  }
+  .input_techStack:focus{
+    outline: none;
+  }
+
+  .input_techStack::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #bdc3c7;
+  }
+  .input_techStack::-moz-placeholder { /* Firefox 19+ */
+    color: #bdc3c7;
+  }
+  .input_techStack:-ms-input-placeholder { /* IE 10+ */
+    color: #bdc3c7;
+  }
+  .input_techStack:-moz-placeholder { /* Firefox 18- */
+    color: #bdc3c7;
+  }
+  .learn_button{
+    float: right;
+    height: 52px;
+    background-image: url('./../../img/learn-icon.png');
+    background-size: cover;
+    width: 52px;
+    margin-left: 1px;
+  }

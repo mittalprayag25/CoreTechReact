@@ -1,0 +1,53 @@
+.stackContainer{
+  margin: auto;
+  border: 1px solid yellow;
+  padding: 10px;
+  display: inline-table;
+}
+
+#app{
+  text-align: center;
+  background-color: #14173A;
+  height: 100vh;
+}
+.caption{
+  color: yellow;
+  font-size: 1em;
+  margin-top: 4em;
+}
+.caption.first{
+  left: 30%;
+}
+.caption.second{
+  left: 38%
+}
+.caption.third{
+  left: 46%
+}
+.caption.fourth{
+  left: 54%
+}
+.caption.fifth{
+  left: 62%
+}
+.caption.sixth{
+  left: 70%
+}
+
+.logo_img{
+  height: 60px;
+  width: 200px;
+  margin-top: -129px;
+}
+.align_centre_in_page{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+}
+.setup{
+  height: 100px;
+  width: 100px;
+}
