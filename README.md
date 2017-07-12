@@ -6,7 +6,7 @@
 
 ## Time stamps from [YouTube video](https://www.youtube.com/watch?v=MhkGQAoc7bc)
 * 0:50 Babel overview
-* 1:29 Webpack config 
+* 1:29 Webpack config
 * 2:37 NPM install
 * 3:13 Looking at client.js & breaking down React
 * 5:45 Serving content from file
@@ -15,3 +15,4 @@
 * 7:55 --Inline --hot (live reload)
 * 8:30 Creating a "dev" command in NPM
 
+# CoreTechReact
