@@ -1,23 +1,30 @@
 import React from 'react';
 import * as axios from 'axios';
-
-
+import { Link } from 'react-router-dom';
 export default class TechStack extends React.Component{
-  constructor(){
-    super();
+  constructor(props){
+    super(props);
+    console.log("techstack");
   }
 
   render(){
     return (
       <div>
-        <input type="text" className="input_techStack" placeholder="#Angularjs, #Android, #React"/>
-        <span className="learn_button" onClick={this.search.bind(this)}> </span>
+        <input type="text" className="input_techStack" id="tech_select" placeholder="#Angularjs, #Android, #React"/>
+        <span className="learn_button" onClick={this.search.bind(this)}></span>
       </div>
     )
   }
 
-  search(){
-    console.log("search");
+  componentWillReceiveProps(nextProps) {
+    this.setState({technology : nextProps.techData});
+  }
 
+  search(e){
+    console.log(e);
+    var searchTech = document.getElementById('tech_select').value.toLowerCase();
+    var index = _.findIndex(this.state.technology, function(o) { return o.tech.toLowerCase() == searchTech; });
+    var selectedObject = this.state.technology[index];
+    this.props.history.push('/techMap');
   }
 }

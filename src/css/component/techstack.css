@@ -6,9 +6,6 @@
     font-weight: 500;
     padding: .3em;
     float: left;
-    background-image: url('./../../img/learn-icon.png');
-    background-size: cover;
-
   }
   .input_techStack:focus{
     outline: none;

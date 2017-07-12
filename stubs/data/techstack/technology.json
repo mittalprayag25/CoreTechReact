@@ -1,11 +1,32 @@
 {
-  "technology" : [
-    "Android",
-    "Angularjs",
-    "iOS",
-    "React",
-    "React-Native",
-    "Hadoop",
-    "Spring"
+  "technology": [
+    {
+      "id": 1,
+      "tech": "Android"
+    },
+    {
+      "id": 1,
+      "tech": "Angularjs"
+    },
+    {
+      "id": 1,
+      "tech": "iOS"
+    },
+    {
+      "id": 1,
+      "tech": "React"
+    },
+    {
+      "id": 1,
+      "tech": "React-Native"
+    },
+    {
+      "id": 1,
+      "tech": "Hadoop"
+    },
+    {
+      "id": 1,
+      "tech": "Android"
+    }
   ]
 }
