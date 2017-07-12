@@ -5,14 +5,14 @@
 4. Navigate to localhost:8080
 
 ## Time stamps from [YouTube video](https://www.youtube.com/watch?v=MhkGQAoc7bc)
-* 0:50 Babel overview
-* 1:29 Webpack config
-* 2:37 NPM install
-* 3:13 Looking at client.js & breaking down React
-* 5:45 Serving content from file
-* 6:18 Live reload w/ npm install -S webpack-dev-server
-* 7:10 webpack dev server --content-base src
-* 7:55 --Inline --hot (live reload)
-* 8:30 Creating a "dev" command in NPM
+* Babel overview
+* Webpack config
+* NPM install
+* Looking at client.js & breaking down React
+* Serving content from file
+* Live reload w/ npm install -S webpack-dev-server
+* webpack dev server --content-base src
+* --Inline --hot (live reload)
+* Creating a "dev" command in NPM
 
 # CoreTechReact
