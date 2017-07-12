@@ -6,8 +6,14 @@
 }
 
 #app{
-  text-align: center;
+
+  /*background-color: #14173A;*/
+
+}
+.home_container{
+  background-color: #14173A;
   height: 100vh;
+  text-align: center;
 }
 .caption{
   color: yellow;

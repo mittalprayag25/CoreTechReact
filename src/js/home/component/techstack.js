@@ -1,6 +1,5 @@
 import React from 'react';
 import * as axios from 'axios';
-import { Link } from 'react-router-dom';
 export default class TechStack extends React.Component{
   constructor(props){
     super(props);
@@ -21,7 +20,6 @@ export default class TechStack extends React.Component{
   }
 
   search(e){
-    console.log(e);
     var searchTech = document.getElementById('tech_select').value.toLowerCase();
     var index = _.findIndex(this.state.technology, function(o) { return o.tech.toLowerCase() == searchTech; });
     var selectedObject = this.state.technology[index];

@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from 'react-router-dom'
 
 
-import Home from './home/component/home';
-import PageNotFound from "./home/component/NotFound";
-import TechMap from "./home/component/TechMap";
+import Home from './home/pages/home';
+import PageNotFound from "./home/pages/NotFound";
+import TechMap from "./home/pages/TechMap";
 import { Switch, Route} from 'react-router-dom'
 
 // import Layout from "./components/Layout";
@@ -16,9 +16,6 @@ import Main from "./home/Main";
 
 ReactDOM.render((
   <BrowserRouter>
-    <div>
-        <Route exact path="/" component={Home}/>
-        <Route path="/techMap" component={TechMap}/>
-    </div>
+    <Main />
   </BrowserRouter>
 ), document.getElementById('app'))

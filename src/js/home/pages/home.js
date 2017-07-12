@@ -1,7 +1,7 @@
 import React from 'react';
 import * as axios from 'axios';
 
-import TechStack from './techstack';
+import TechStack from './../component/techstack';
 
 export default class Home extends React.Component{
   constructor(props){
@@ -11,7 +11,7 @@ export default class Home extends React.Component{
 
   render(){
     return (
-      <div>
+      <div className="home_container">
         <img src="./../../../img/slack.png" className="logo_img align_centre_in_page"/>
         <div className="stackContainer align_centre_in_page">
           <TechStack techData={this.state.technology} history={this.props.history}></TechStack>
@@ -39,7 +39,7 @@ export default class Home extends React.Component{
   }
 
   componentWillMount() {
-   //this.getTechData();
+   this.getTechData();
   }
 
 }

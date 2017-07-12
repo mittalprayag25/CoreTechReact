@@ -1,0 +1,37 @@
+.header_container{
+  /*background-color: #14173A;*/
+  height: 3em;
+}
+.header_container-logo{
+  height: 3em;
+      width: 119px;
+      margin: auto;
+      padding: 5px;
+}
+.header-container-category-list{
+  display: inline;
+}
+.header-container-category-list li{
+  display: inline;
+  color: #14173A;
+  font-size: 20px;
+  margin-left: 2em;
+}
+.header-container-category-list .selected{
+  background-color: #14173A;
+    border-radius: 7px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 3px;
+    font-weight: 200;
+}
+.header-container-category-list-basic{
+
+}
+.header-container-category-list-advanced{
+
+}
+.header-container-category-list-expert{
+
+}
