@@ -2,3 +2,14 @@
   height: 100vh;
   background-color: #ecf0f1;
 }
+
+.random{
+  color: green;
+  position: relative;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.techmap_body{
+  height : 100vh;
+  background-color: #ecf0f1;
+}

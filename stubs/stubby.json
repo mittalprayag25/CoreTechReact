@@ -282,5 +282,18 @@
     },
     "file": "stubs/data/techstack/technology.json"
   }
+},{
+  "request": {
+    "url": "^/api/techStack?$",
+    "method": "GET"
+  },
+  "response": {
+    "status": 200,
+    "latency": 800,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "file": "stubs/data/techstack/tech-stack.json"
+  }
 }
 ]

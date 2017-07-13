@@ -31,15 +31,15 @@ export default class TechMap extends React.Component{
     switch (category) {
       case this.basic:
         this.setState({selectedBasic : "selected", selectedAdvanced : "", selectedExpert : ""});
-        this.props.history.push('/techMap/');
+        this.props.history.push({pathname : '/techMap/', state : {expertise : this.basic}});
       break;
       case this.advanced:
         this.setState({selectedBasic : "", selectedAdvanced : "selected", selectedExpert : ""});
-        this.props.history.push('/techMap/advanced');
+        this.props.history.push({pathname : '/techMap/advanced', state : {expertise : this.advanced}});
       break;
       case this.expert:
         this.setState({selectedBasic : "", selectedAdvanced : "", selectedExpert : "selected"});
-        this.props.history.push('/techMap/expert');
+        this.props.history.push({pathname : '/techMap/expert', state : {expertise : this.expert}});
       break;
       default:
 

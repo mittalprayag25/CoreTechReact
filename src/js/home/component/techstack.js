@@ -23,6 +23,6 @@ export default class TechStack extends React.Component{
     var searchTech = document.getElementById('tech_select').value.toLowerCase();
     var index = _.findIndex(this.state.technology, function(o) { return o.tech.toLowerCase() == searchTech; });
     var selectedObject = this.state.technology[index];
-    this.props.history.push('/techMap');
+    this.props.history.push({pathname : '/techMap', state : {technology : selectedObject}});
   }
 }

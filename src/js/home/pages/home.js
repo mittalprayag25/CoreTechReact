@@ -31,7 +31,6 @@ export default class Home extends React.Component{
     axios.get('http://localhost:8000/api/stack')
     .then(function (response) {
       self.setState({technology : response.data.technology, filteredtechnology : response.data.technology});
-      console.log(response);
     })
     .catch(function (response) {
       console.log(response);
