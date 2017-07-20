@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter } from 'react-router-dom'
-
+import { BrowserRouter } from 'react-router-dom';
+import {Provider} from "react-redux";
 
 import Home from './home/pages/home';
 import PageNotFound from "./home/pages/NotFound";
@@ -11,11 +11,16 @@ import { Switch, Route} from 'react-router-dom'
 // import Layout from "./components/Layout";
 import Main from "./home/Main";
 
-// const app = document.getElementById('app');
-// ReactDOM.render(<Main/>, app);
+import {createStore} from 'redux';
+import {Component} from 'React';
+import {combineReducers} from 'Redux';
+import store from "./store"
+
 
 ReactDOM.render((
-  <BrowserRouter>
-    <Main />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <Main />
+    </BrowserRouter>
+  </Provider>
 ), document.getElementById('app'))
