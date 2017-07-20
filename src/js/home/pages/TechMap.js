@@ -9,7 +9,7 @@ export default class TechMap extends React.Component{
   constructor(props){
     super(props);
     console.log("########");
-    console.log(this.props.location.state);
+    console.log(this.props.location.state.technology);
   }
 
   render(){
@@ -24,5 +24,4 @@ export default class TechMap extends React.Component{
       </div>
     )
   }
-
 }

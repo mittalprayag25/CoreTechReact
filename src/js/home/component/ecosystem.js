@@ -9,7 +9,7 @@ export default class Ecosystem extends React.Component{
 
   render(){
     console.log("render");
-    console.log(this.state.technology);
+    console.log(this.props.technology);
     var indents = [];
     if(this.state.technology != undefined){
       for (var i = 0; i < this.state.technology.length; i++) {

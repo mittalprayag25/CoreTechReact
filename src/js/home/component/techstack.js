@@ -1,12 +1,33 @@
 import React from 'react';
 import * as axios from 'axios';
+import { connect } from "react-redux";
+
+import { fetchUser, setUserName } from "../../actions/userActions"
+import { fetchTweets, addTweet ,updateTweet, deleteTweet} from "../../actions/tweetsActions"
+
+
+
+@connect((store) => {
+  console.log("connect");
+  console.log(store);
+  return {
+    user: store.user.user,
+    userFetched: store.user.fetched,
+    tweets: store.tweets.tweets,
+  };
+})
+
 export default class TechStack extends React.Component{
   constructor(props){
     super(props);
-    console.log("techstack");
   }
 
   render(){
+    const { user, tweets } = this.props;
+    console.log("user");
+    // console.log("tweets");
+    console.log(tweets);
+
     return (
       <div>
         <input type="text" className="input_techStack" id="tech_select" placeholder="#Angularjs, #Android, #React"/>
@@ -15,6 +36,9 @@ export default class TechStack extends React.Component{
     )
   }
 
+  // fetchTweets() {
+  //   this.props.dispatch(fetchTweets())
+  // }
   componentWillReceiveProps(nextProps) {
     this.setState({technology : nextProps.techData});
   }
