@@ -1,15 +1,36 @@
 import React from 'react';
 
+import { fetchUser, setUserName } from "./../../actions/userActions";
+import { fetchTweets, addTweet ,updateTweet, deleteTweet} from "./../../actions/tweetsActions";
+import { searchTech, getTechData } from "./../../actions/technologyActions";
+import { connect } from "react-redux";
+
+
+
+
+@connect((store) => {
+  console.log("connect");
+  return {
+    user: store.user.user,
+    userFetched: store.user.fetched,
+    tweets: store.tweets.tweets,
+    technology: store.technology.technology
+  };
+})
+
 export default class Ecosystem extends React.Component{
   constructor(props){
     super(props);
     this.fontSize = 16;
     this.state = {technology : undefined};
+
+
   }
 
   render(){
-    console.log("render");
-    console.log(this.props.technology);
+    const {technologyStack} = this.props;
+
+    console.log(this.props.technology.relatedTech.techStack);
     var indents = [];
     if(this.state.technology != undefined){
       for (var i = 0; i < this.state.technology.length; i++) {
@@ -35,20 +56,15 @@ export default class Ecosystem extends React.Component{
     console.log("selectTech");
   }
 
-  getTechData(){
-    let self = this;
-    axios.get('http://localhost:8000/api/techStack?id=12')
-    .then(function (response) {
-      console.log(response);
-      self.setState({technology: response.data.technology});
-    })
-    .catch(function (response) {
-      console.log(response);
-    });
+  getTechData(technologyId){
+    this.props.dispatch(getTechData(technologyId));
   }
 
   componentWillMount() {
-    this.getTechData();
+    const {technology} = this.props.technology;
+    console.log("Ecosystem");
+    console.log(technology);
+    this.getTechData(technology.id);
   }
   componentDidUpdate(){
     this.init();
@@ -99,7 +115,7 @@ export default class Ecosystem extends React.Component{
     element.style.left=xCoord+'px';
     element.style.top=yCoord+'px';
     element.style.color = this.getRandomColor();
-  //  element.style.fontSize = this.increaseFont()+'px';
+    //  element.style.fontSize = this.increaseFont()+'px';
     this.increaseFont();
   }
 
