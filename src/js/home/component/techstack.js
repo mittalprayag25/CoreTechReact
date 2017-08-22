@@ -26,7 +26,6 @@ export default class TechStack extends React.Component{
   render(){
     const { user, tweets, technology } = this.props;
     console.log("user");
-    // console.log("tweets");
     console.log(technology);
 
     return (

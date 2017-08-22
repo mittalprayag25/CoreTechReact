@@ -9,12 +9,13 @@ import { connect } from "react-redux";
 
 
 @connect((store) => {
-  console.log("connect");
+  console.log("ecoconnect");
   return {
     user: store.user.user,
     userFetched: store.user.fetched,
     tweets: store.tweets.tweets,
-    technology: store.technology.technology
+    technology: store.technology.technology,
+    relatedTech : store.technology.relatedTech
   };
 })
 
@@ -23,26 +24,23 @@ export default class Ecosystem extends React.Component{
     super(props);
     this.fontSize = 16;
     this.state = {technology : undefined};
-
+    console.log("eco cons");
 
   }
 
   render(){
-    const {technologyStack} = this.props;
-
-    console.log(this.props.technology.relatedTech.techStack);
-    var indents = [];
-    if(this.state.technology != undefined){
-      for (var i = 0; i < this.state.technology.length; i++) {
-        indents.push(
-          <span key={this.state.technology[i].tech} className="random"
-          onClick={this.selectTech.bind(this)}>
-          {this.state.technology[i].tech}
-          </span>
-        );
-      }
-
-    }
+    console.log(this.props);
+    if(this.props.relatedTech != undefined){
+      var indents = [];
+          for (var i = 0; i < this.props.relatedTech.associatedTech.length; i++) {
+            indents.push(
+              <span key={this.props.relatedTech.associatedTech[i].tech} className="random"
+              onClick={this.selectTech.bind(this)}>
+              {this.props.relatedTech.associatedTech[i].tech}
+              </span>
+            );
+          }
+        }
 
     return (
       <div>
@@ -57,6 +55,7 @@ export default class Ecosystem extends React.Component{
   }
 
   getTechData(technologyId){
+    console.log("gettechdata");
     this.props.dispatch(getTechData(technologyId));
   }
 

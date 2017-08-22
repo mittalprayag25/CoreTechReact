@@ -10,13 +10,13 @@ export default function reducer(state={
       case "SEARCH_TECH": {
         return {
           ...state,
-          technology : action.payload
+          technology : action.payload.technology
         }
       }
       case "FETCH_RELATED_TECH_SUCCESS" : {
         return{
           ...state,
-          relatedTech : action.payload
+          relatedTech : action.payload.techStack[0]
         }
       }
     }
