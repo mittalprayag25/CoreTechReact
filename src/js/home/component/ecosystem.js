@@ -35,7 +35,7 @@ export default class Ecosystem extends React.Component{
           for (var i = 0; i < this.props.relatedTech.associatedTech.length; i++) {
             indents.push(
               <span key={this.props.relatedTech.associatedTech[i].tech} className="random"
-              onClick={this.selectTech.bind(this)}>
+              onClick={this.selectTech.bind(this, this.props.relatedTech.associatedTech[i].tech)}>
               {this.props.relatedTech.associatedTech[i].tech}
               </span>
             );
@@ -50,8 +50,9 @@ export default class Ecosystem extends React.Component{
 
   }
 
-  selectTech(){
-    console.log("selectTech");
+  selectTech(tech){
+    console.log(tech);
+    alert(tech);
   }
 
   getTechData(technologyId){
@@ -62,8 +63,8 @@ export default class Ecosystem extends React.Component{
   componentWillMount() {
     const {technology} = this.props.technology;
     console.log("Ecosystem");
-    console.log(technology);
-    this.getTechData(technology.id);
+    console.log(this.props.technology.id);
+    this.getTechData(this.props.technology.id);
   }
   componentDidUpdate(){
     this.init();
