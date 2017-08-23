@@ -16,3 +16,6 @@
 * Creating a "dev" command in NPM
 
 # CoreTechReact
+
+# RUN STUBS
+1. gulp stub
