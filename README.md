@@ -1,8 +1,9 @@
 ## Instructions to run
 1. Navigate to folder */1-basic-react*
 2. *NPM install*
-3. *NPM run dev*
-4. Navigate to localhost:8080
+3. *gulp stub*
+4. *NPM run dev*
+5. Navigate to localhost:3000
 
 ## Time stamps from [YouTube video](https://www.youtube.com/watch?v=MhkGQAoc7bc)
 * Babel overview
@@ -16,3 +17,6 @@
 * Creating a "dev" command in NPM
 
 # CoreTechReact
+
+# RUN STUBS
+1. gulp stub

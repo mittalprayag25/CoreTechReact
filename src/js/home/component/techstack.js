@@ -2,18 +2,19 @@ import React from 'react';
 import * as axios from 'axios';
 import { connect } from "react-redux";
 
-import { fetchUser, setUserName } from "../../actions/userActions"
-import { fetchTweets, addTweet ,updateTweet, deleteTweet} from "../../actions/tweetsActions"
+import { fetchUser, setUserName } from "./../../actions/userActions";
+import { fetchTweets, addTweet ,updateTweet, deleteTweet} from "./../../actions/tweetsActions";
+import { searchTech } from "./../../actions/technologyActions";
 
 
 
 @connect((store) => {
   console.log("connect");
-  console.log(store);
   return {
     user: store.user.user,
     userFetched: store.user.fetched,
     tweets: store.tweets.tweets,
+    technology: store.technology.technology
   };
 })
 
@@ -23,10 +24,9 @@ export default class TechStack extends React.Component{
   }
 
   render(){
-    const { user, tweets } = this.props;
+    const { user, tweets, technology } = this.props;
     console.log("user");
-    // console.log("tweets");
-    console.log(tweets);
+    console.log(technology);
 
     return (
       <div>
@@ -44,9 +44,10 @@ export default class TechStack extends React.Component{
   }
 
   search(e){
-    var searchTech = document.getElementById('tech_select').value.toLowerCase();
-    var index = _.findIndex(this.state.technology, function(o) { return o.tech.toLowerCase() == searchTech; });
+    var tech = document.getElementById('tech_select').value.toLowerCase();
+    var index = _.findIndex(this.state.technology, function(o) { return o.tech.toLowerCase() == tech; });
     var selectedObject = this.state.technology[index];
-    this.props.history.push({pathname : '/techMap', state : {technology : selectedObject}});
+    this.props.dispatch(searchTech(selectedObject));
+    this.props.history.push({pathname : '/techMap'});
   }
 }

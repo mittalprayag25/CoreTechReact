@@ -8,8 +8,6 @@ import Header from './../component/header';
 export default class TechMap extends React.Component{
   constructor(props){
     super(props);
-    console.log("########");
-    console.log(this.props.location.state.technology);
   }
 
   render(){
